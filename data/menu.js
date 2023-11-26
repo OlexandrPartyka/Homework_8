@@ -1,0 +1,163 @@
+const fs = require("fs");
+
+const product = [
+    {
+      title: "Fried Crab",
+      price: 360,
+      weight: "300G",
+      roll_number: 20,
+      category: "sushi",
+      ingredients: [
+        "rice",
+        "nori",
+        "crab",
+        "cream cheese",
+        "spicy sauce",
+        "cheese pillow",
+        "unagi sauce",
+        "sesame mix",
+      ],
+    },
+  
+    {
+      title: "Roll vulcano",
+      price: 240,
+      weight: "250G",
+      roll_number: 15,
+      category: "sushi",
+      ingredients: [
+        "rice",
+        "nori",
+        "crab",
+        "cucumber",
+        "salmon fried in tempura",
+        "tobiko caviar",
+        "unagi sauce",
+        "sesame mix",
+      ],
+    },
+  
+    {
+      title: "Maki set",
+      price: 500,
+      weight: "0.5Kg",
+      roll_number: 10,
+      category: "sushi",
+      ingredients: [
+        "rice",
+        "maki with cucumber",
+        "maki with avocado",
+        "maki with salmon ",
+        "maki with eel",
+        "maki with smoked salmon",
+        "maki with surimi",
+        "maki with tuna",
+        "maki with shrimp",
+        " maki filet",
+        "maki filet with salmon roe",
+      ],
+    },
+  
+    {
+      title: "SUSHIBOOM set",
+      price: 1238,
+      weight: "1Kg",
+      roll_number: 16,
+      category: "sushi",
+      ingredients: [
+        "rice",
+        "maki with salmon",
+        "maki filo",
+        " maki with cucumber",
+        "maki with avocado",
+        "Philadelphia with salmon",
+        "Philadelphia with eel",
+        "California filet with smoked salmon",
+        "California filet with eel",
+        " golden dragon",
+        "green dragon",
+        " bonito light roll",
+      ],
+    },
+  
+    {
+      title: "Ninja set",
+      price: 910,
+      weight: "360G",
+      roll_number: 8,
+      category: "sushi",
+      ingredients: [
+        "Ninja with avocado and tuna",
+        "Ninja with spicy shrimp",
+        "Ninja with shrimp and avocado",
+        "Ninja with shrimp and salmon",
+        "Ninja with shrimp and tuna",
+      ],
+    },
+  
+    {
+      title: "Fuji set",
+      price: 370,
+      weight: "386G",
+      roll_number: 16,
+      category: "sushi",
+      ingredients: [
+        "Philadelphia Classic",
+        " Gunkan with Salmon",
+        "Gunkan with Eel",
+        "Gunkan with Shrimp",
+      ],
+    },
+  
+    {
+      title: "Set of the Week",
+      price: 1238,
+      weight: "1Kg",
+      roll_number: 16,
+      category: "sushi",
+      ingredients: [
+        "Philadelphia Classic",
+        "Chicken Roll",
+        "California Classic",
+        "Baked Hosomaki with Avocado",
+        "Hosomaki Salmon",
+      ],
+    },
+  
+    {
+      title: "Ocean set",
+      price: 565,
+      weight: "2.4Kg",
+      roll_number: 80,
+      category: "sushi",
+      ingredients: [
+        "Philadelphia Classic X2",
+        "Philadelphia Eel",
+        "Tenderness",
+        "California Classic",
+        "California Shrimp",
+        "California Grilled Salmon",
+        "Philadelphia Sesame",
+        " Baked Roll with Salmon in Sesame",
+        "Baked Roll with Shrimp in Caviar",
+      ],
+    },
+  
+    {
+      title: "Ocean set",
+      price: 620,
+      weight: "1Kg",
+      roll_number: 32,
+      category: "sushi",
+      ingredients: [
+        "Philadelphia Classic",
+        "Cheese Roll",
+        "California Grilled Salmon",
+        "Baked Salmon Roll in Sesame",
+      ],
+    },
+  ];
+const dataToSave = JSON.stringify(product, null, 2);
+
+fs.writeFileSync("personData.json", dataToSave);
+console.log("Data has been saved to personData.json");
